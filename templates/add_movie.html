@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Movie {% endblock title %}
+
+{% block body %}
+<br><br>
+<form method="post" action="/add_movie">
+{% csrf_token %}
+  <div class="col-auto">
+    <label for="movie_name" class="visually-hidden">Enter Movie Name</label>
+    <input type="text" class="form-control" id="movie_name" name="movie_name" placeholder="Movie Name">
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary mb-3">Add Movie</button>
+  </div>
+</form>
+
+{% endblock body %}
